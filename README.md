@@ -1,59 +1,73 @@
-# WebClientes
+# 🌐 WebClientes
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.3.8.
+Aplicação **Angular 20** que permite realizar **cadastro, consulta,
+edição e exclusão de clientes**, integrando-se à API `apiClientes`
+desenvolvida em **Spring Boot**.\
+O projeto utiliza **Bootstrap** para estilização e segue boas práticas
+de desenvolvimento frontend moderno.
 
-## Development server
+------------------------------------------------------------------------
 
-To start a local development server, run:
+## 🚀 Tecnologias Utilizadas
 
-```bash
+### [Angular 20](https://angular.dev/)
+
+Framework front-end desenvolvido pelo Google para criação de aplicações
+web **SPA (Single Page Application)**.\
+Ele utiliza **TypeScript**, **componentização**, **injeção de
+dependência** e **binding de dados reativo**.\
+Principais recursos usados neste projeto: - Módulos (`NgModule`) para
+organização das funcionalidades.\
+- Componentes para criação de telas independentes.\
+- **HttpClient** para integração com a API de clientes.\
+- **Reactive Forms** para formulários dinâmicos e validação.\
+- **Routing** para navegação entre páginas (SPA).
+
+### [Bootstrap 5](https://getbootstrap.com/)
+
+Framework CSS que facilita o design responsivo e moderno da interface.\
+É utilizado neste projeto para: - Layouts baseados em **grid system**.\
+- Botões, tabelas, formulários e componentes prontos.\
+- Compatibilidade com dispositivos móveis.
+
+### [TypeScript](https://www.typescriptlang.org/)
+
+Superset do JavaScript que adiciona **tipagem estática** e **recursos de
+orientação a objetos**.\
+Proporciona mais segurança e produtividade no desenvolvimento com
+Angular.
+
+### [Node.js](https://nodejs.org/)
+
+Ambiente de execução JavaScript utilizado para **compilar e rodar o
+Angular CLI**.\
+Necessário para executar scripts e iniciar o servidor local de
+desenvolvimento.
+
+### [Angular CLI](https://angular.dev/tools/cli)
+
+Ferramenta de linha de comando do Angular que facilita a criação,
+compilação e publicação da aplicação.\
+Exemplo de comandos usados:
+
+``` bash
+ng new webClientes
 ng serve
+ng build --configuration production
 ```
+------------------------------------------------------------------------
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+## 📚 Recursos Úteis
 
-## Code scaffolding
+-   [Documentação Angular](https://angular.dev/)
+-   [Documentação
+    Bootstrap](https://getbootstrap.com/docs/5.3/getting-started/introduction/)
+-   [Documentação TypeScript](https://www.typescriptlang.org/docs/)
+-   [Documentação Angular CLI](https://angular.dev/tools/cli)
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+------------------------------------------------------------------------
 
-```bash
-ng generate component component-name
-```
+## 🧑‍💻 Autor
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+**Matheus de Maglhães**\
+Estudante de Programação e Cibersegurança

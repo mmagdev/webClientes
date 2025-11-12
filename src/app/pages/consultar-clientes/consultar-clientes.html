@@ -1,0 +1,68 @@
+<h1 class="ms-3">Sistema de Clientes</h1>
+
+
+
+<div class="card shadow m-5">
+  <div class="card-body" style="background-color: #5094d8;">
+
+    <h3 class="card-title">Consulta de Clientes</h3>
+    <p>Listagem de clientes cadastrados no sistema</p>
+
+    <form [formGroup]="formulario" (ngSubmit)="consultarClientes()">
+        <div class="row mb-3">
+            <div class='col'>
+                <input type="text" class="form-control" formControlName="nome"
+                placeholder="Digite o nome do cliente">
+            </div>
+            <div class='col'>
+                <input type="submit" class="btn btn-dark" 
+                [disabled]="formulario.invalid"
+                value="Pesquisar">               
+            </div>
+        </div>
+    </form>
+
+    <table class="table table=sm">
+      <thead>
+        <tr>
+          <th>Nome do cliente</th>
+          <th>Email</th>
+          <th>CPF</th>
+          <th>Telefone</th>
+          <th>Data de nascimento</th>
+          <th>Data de cadastro</th>
+          <th>Ações</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr *ngFor="let c of clientes()">
+          <td>{{c.nome}}</td>
+          <td>{{c.email}}</td>
+          <td>{{c.cpf}}</td>
+          <td>{{c.telefone}}</td>
+          <td>{{c.dataNascimento | date:'dd/MM/yyyy'}}</td>
+          <td>{{c.dataCadastro | date:'dd/MM/yyyy HH:mm:ss'}}</td>
+          <td>
+            <button class="btn btn-sm btn-primary me-1">Editar</button>
+            <button class="btn btn-sm btn-danger me-1">Excluir</button>
+          </td>
+
+        </tr>
+
+      </tbody>
+
+      <tfoot>
+        
+        <tr>
+          <td colspan="7">
+            Quantidade de clientes: {{clientes().length}}
+          </td>
+        </tr>
+      </tfoot>
+
+    </table>
+
+  </div>
+
+</div>
