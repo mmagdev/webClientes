@@ -1,1 +1,47 @@
-<p>cadastrar-clientes works!</p>
+<div class="card shadow m-4">
+    <div class="card-body">
+
+        <h3 class="card-title">Cadastro de clientes</h3>
+        <p>Preencha os campos para incluir um cliente no sistema.</p>
+
+        <form [formGroup]="formulario" (ngSubmit)="cadastrarCliente()">
+            <div class="mb-2">
+                <label for="">Nome do Cliente</label>
+                <input type="text" class="form-control" formControlName="nome" placeholder="Digite o nome do cliente"/>
+
+            </div>
+
+            <div class="mb-2">
+                <label for="">Email</label>
+                <input type="text" class="form-control" formControlName="email" placeholder="Digite o email do cliente"/>
+
+            </div>
+
+            <div class="mb-2">
+                <label for="">CPF</label>
+                <input type="text" class="form-control" formControlName="cpf" placeholder="Digite o CPF do cliente"/>
+
+            </div>
+
+            <div class="mb-2">
+                <label for="">Contato</label>
+                <input type="text" class="form-control" formControlName="telefone" placeholder="Digite o telefone do cliente"/>
+
+            </div>
+
+            <div class="mb-2">
+                <label for="">Data de nascimento</label>
+                <input type="date" class="form-control" formControlName="dataNascimento" placeholder="Digite a data de nascimento"/>
+
+            </div>
+
+            <div class="mb-2">
+                <input type="submit" class="btn btn-success"
+                [disabled]="formulario.invalid"
+                value="Realizar cadastro"/>
+
+            </div>
+        </form>
+
+    </div>
+</div>
